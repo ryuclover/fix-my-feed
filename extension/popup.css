@@ -1,0 +1,18 @@
+:root { color-scheme: dark; font: 13px/1.5 system-ui, sans-serif; background: #151718; color: #ecefed; }
+* { box-sizing: border-box; } body { width: 380px; margin: 0; }
+header { padding: 24px 24px 18px; background: #202623; border-bottom: 1px solid #38413c; }
+.eyebrow { font-size: 9px; font-weight: 700; letter-spacing: 2px; color: #a8b9ad; }
+h1 { font-size: 30px; line-height: 1.15; margin: 10px 0; letter-spacing: -1px; } h1 span { color: #f6b44e; float: right; }
+header p { color: #bac6be; margin: 0; } main { padding: 16px 24px 0; }
+section { padding: 16px 0; border-top: 1px solid #333a36; }
+h2 { margin: 0 0 12px; color: #f6b44e; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+label { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 11px 0; }
+input[type=number] { width: 85px; } input, select { border: 1px solid #535e57; border-radius: 6px; padding: 6px; background: #242a26; color: #eee; }
+input[type=checkbox] { accent-color: #f6b44e; width: 18px; height: 18px; }
+.toggle { font-size: 15px; font-weight: 600; margin-top: 0; }
+button { border: 1px solid #535e57; background: #242a26; color: #eef3ef; border-radius: 8px; padding: 9px 12px; cursor: pointer; font: inherit; }
+button:hover { border-color: #f6b44e; } button:disabled { opacity: .5; cursor: wait; }
+.primary { background: #f6b44e; color: #1f211d; border: 0; width: 100%; font-weight: 750; margin: 0 0 20px; }
+.hint, footer, #stats { font-size: 11px; color: #a7b2aa; } .hint { margin-bottom: 0; }
+.actions { display: grid; gap: 8px; } #feedback { color: #f6b44e; font-size: 12px; min-height: 18px; }
+footer { padding: 0 24px 20px; } :focus-visible { outline: 2px solid #f6b44e; outline-offset: 3px; }

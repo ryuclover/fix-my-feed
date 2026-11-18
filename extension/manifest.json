@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Fix My Feed — YouTube",
+  "version": "0.1.0",
+  "description": "Menos recomendações repetidas, mais novidades. Histórico local e controles em português.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "Fix My Feed", "default_popup": "popup.html" },
+  "content_scripts": [{
+    "matches": ["https://www.youtube.com/*"],
+    "js": ["core.js", "content.js"],
+    "css": ["content.css"],
+    "run_at": "document_idle"
+  }]
+}

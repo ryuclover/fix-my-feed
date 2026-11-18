@@ -1,0 +1,11 @@
+[data-fmf="hide"] { display: none !important; }
+[data-fmf="dim"] { opacity: .25 !important; outline: 2px dashed #ff9158; outline-offset: -2px; }
+.fmf-card { position: relative !important; }
+.fmf-hide { position: absolute; top: 8px; left: 8px; z-index: 20; width: 30px; height: 30px; border: 1px solid #ffffff50; border-radius: 50%; background: #171717e8; color: white; font: 24px/24px system-ui; cursor: pointer; opacity: 0; }
+.fmf-card:hover > .fmf-hide, .fmf-hide:focus-visible { opacity: 1; }
+.fmf-hide:hover { background: #a83222; }
+#fmf-bar, #fmf-toast { position: fixed; bottom: 18px; z-index: 2200; background: #202020; color: #eee; border: 1px solid #555; border-radius: 12px; padding: 10px 14px; display: flex; gap: 12px; align-items: center; font: 12px/1.4 system-ui; box-shadow: 0 4px 20px #0006; }
+#fmf-bar { right: 18px; max-width: min(520px, calc(100vw - 64px)); }
+#fmf-toast { left: 18px; bottom: 78px; }
+#fmf-toast[hidden] { display: none; }
+#fmf-bar button, #fmf-toast button { border: 0; border-radius: 7px; padding: 7px 10px; background: #f6b44e; color: #191919; cursor: pointer; font: 600 12px system-ui; white-space: nowrap; }

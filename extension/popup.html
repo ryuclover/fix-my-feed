@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Fix My Feed</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <header><span class="eyebrow">YOUTUBE, COM MAIS NOVIDADES</span><h1>Fix My Feed<span>↻</span></h1><p>Chega dos mesmos vídeos.</p></header>
+  <main>
+    <label class="toggle"><span>Ativar filtro</span><input id="enabled" type="checkbox"></label>
+    <p id="stats" role="status">Carregando…</p>
+    <button id="renew" class="primary">Renovar feed agora</button>
+    <section><h2>Repetições</h2>
+      <label>Ocultar após quantas aparições?<input id="threshold" type="number" min="1" max="50"></label>
+      <label>Esquecer aparições após (dias)<input id="expiryDays" type="number" min="1" max="365"></label>
+      <label>Modo<select id="mode"><option value="hide">Ocultar</option><option value="dim">Apenas esmaecer</option></select></label>
+      <label><span>Ocultar vídeos assistidos</span><input id="hideWatched" type="checkbox"></label>
+      <p class="hint">Conta uma aparição por visita, após 0,8 s com metade do cartão na tela. Assistidos: reprodução detectada ou barra de progresso.</p>
+    </section>
+    <section><h2>Onde filtrar</h2>
+      <label>Página inicial<input id="home" type="checkbox"></label>
+      <label>Recomendações ao lado do vídeo<input id="sidebar" type="checkbox"></label>
+      <label>Incluir Shorts nos feeds<input id="shorts" type="checkbox"></label>
+    </section>
+    <section><h2>Preencher a página inicial</h2>
+      <label>Buscar mais vídeos automaticamente<input id="autoFill" type="checkbox"></label>
+      <label>Meta de cartões disponíveis<input id="minFresh" type="number" min="1" max="100"></label>
+      <label>Máximo de tentativas por visita<input id="maxAttempts" type="number" min="1" max="20"></label>
+      <label>Espera por tentativa (ms)<input id="waitMs" type="number" min="500" max="10000" step="100"></label>
+      <p class="hint">Rola até o fim para carregar e restaura a posição. Se você interagir durante a busca, ela para. O YouTube pode não entregar vídeos diferentes.</p>
+    </section>
+    <section><h2>Memória local</h2>
+      <label>Limite de vídeos lembrados<input id="memoryLimit" type="number" min="100" max="30000" step="100"></label>
+      <div class="actions"><button id="clearSeen">Limpar aparições e assistidos</button><button id="clearBlocked">Restaurar bloqueados</button></div>
+      <p class="hint">O × dos cartões bloqueia até você desfazer ou restaurar. Sem conta extra, servidor ou telemetria.</p>
+    </section>
+    <p id="feedback" role="status"></p>
+  </main><footer>Busca, inscrições e páginas de canais ficam livres de filtros.</footer>
+  <script src="core.js"></script><script src="popup.js"></script>
+</body></html>
